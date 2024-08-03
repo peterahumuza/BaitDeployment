@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501 201">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        stroke: #000;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #ccc;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: Helvetica-Light, Helvetica;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M100.5,50.5c0,27.62-22.37,50-50,50S.5,78.12.5,50.5,22.87.5,50.5.5s50,22.37,50,50Z"/>
+    <path class="cls-1" d="M300.5,50.5c0,27.62-22.37,50-50,50s-50-22.38-50-50S222.87.5,250.5.5s50,22.37,50,50Z"/>
+    <path class="cls-1" d="M500.5,50.5c0,27.62-22.37,50-50,50s-50-22.38-50-50S422.87.5,450.5.5s50,22.37,50,50Z"/>
+    <path class="cls-2" d="M500.5,150.5c0,27.62-22.37,50-50,50s-50-22.38-50-50-22.37-50-50-50-50,22.37-50,50-22.37,50-50,50-50-22.38-50-50-22.37-50-50-50-50,22.37-50,50-22.37,50-50,50S.5,178.12.5,150.5s22.37-50,50-50,50-22.38,50-50S122.87.5,150.5.5s50,22.37,50,50,22.37,50,50,50,50-22.38,50-50S322.87.5,350.5.5s50,22.37,50,50,22.37,50,50,50,50,22.37,50,50Z"/>
+    <path class="cls-1" d="M200.5,150.5c0,27.62-22.37,50-50,50s-50-22.38-50-50,22.37-50,50-50,50,22.37,50,50Z"/>
+    <path class="cls-1" d="M400.5,150.5c0,27.62-22.37,50-50,50s-50-22.38-50-50,22.37-50,50-50,50,22.37,50,50Z"/>
+    <text class="cls-3" transform="translate(11.26 54.03)"><tspan x="0" y="0">Contribute</tspan></text>
+    <text class="cls-3" transform="translate(113.84 156.03)"><tspan x="0" y="0">Challenge</tspan></text>
+    <text class="cls-3" transform="translate(220.12 56.03)"><tspan x="0" y="0">Evaluate</tspan></text>
+    <text class="cls-3" transform="translate(331.94 155.96)"><tspan x="0" y="0">Align</tspan></text>
+    <text class="cls-3" transform="translate(429.78 55.96)"><tspan x="0" y="0">Share</tspan></text>
+  </g>
+</svg>

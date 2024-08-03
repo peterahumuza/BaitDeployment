@@ -1,0 +1,1559 @@
+.root {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 0;
+  background-color: #fff;
+}
+.topBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 1728px;
+  height: 80px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0px 0px 6px 0px #0000001f;
+}
+.rectangle4137 {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #0000001a;
+}
+.title {
+  color: #000;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+}
+.navigation {
+  width: min-content;
+  height: min-content;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: #fff;
+}
+.tab {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.tab2 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.tab3 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.section {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 170px;
+  background-color: #0009;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.title2 {
+  color: #fff;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: bold;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.description {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.button {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  overflow: hidden;
+}
+.primary {
+  width: 240px;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #000;
+}
+.title3 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.imageContainer {
+  position: relative;
+  height: 400px;
+  flex: 1;
+  overflow: hidden;
+}
+.image {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  background-color: #d9d9d980;
+}
+.vector200 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1728px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.products {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 170px;
+  overflow: hidden;
+}
+.container2 {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+}
+.title4 {
+  color: #000;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: bold;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 520px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.row {
+  height: min-content;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 40px;
+}
+.card {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.imageContainer2 {
+  height: 340px;
+  align-self: stretch;
+  overflow: hidden;
+}
+.image2 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #d9d9d980;
+}
+.title5 {
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 50%;
+  height: 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+.textContent {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+}
+.title6 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.card2 {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.imageContainer3 {
+  height: 340px;
+  align-self: stretch;
+  overflow: hidden;
+}
+.image3 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #d9d9d980;
+}
+.title7 {
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 50%;
+  height: 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+.textContent2 {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+}
+.title8 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle2 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.card3 {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.imageContainer4 {
+  height: 340px;
+  align-self: stretch;
+  overflow: hidden;
+}
+.image4 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #d9d9d980;
+}
+.title9 {
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 50%;
+  height: 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+.textContent3 {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+}
+.title10 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle3 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.row2 {
+  height: min-content;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 40px;
+}
+.card4 {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.imageContainer5 {
+  height: 340px;
+  align-self: stretch;
+  overflow: hidden;
+}
+.image5 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #d9d9d980;
+}
+.title11 {
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 50%;
+  height: 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+.textContent4 {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+}
+.title12 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle4 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.card5 {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.imageContainer6 {
+  height: 340px;
+  align-self: stretch;
+  overflow: hidden;
+}
+.image6 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #d9d9d980;
+}
+.title13 {
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 50%;
+  height: 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+.textContent5 {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+}
+.title14 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle5 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.vector2002 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1728px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  overflow: visible;
+}
+.icon2 {
+  width: 100%;
+  height: 100%;
+}
+.contents {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 170px;
+  overflow: hidden;
+}
+.container3 {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.title15 {
+  color: #000;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: bold;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 520px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description2 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 520px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list2 {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+}
+.row3 {
+  height: min-content;
+  align-self: stretch;
+  align-items: center;
+  gap: 40px;
+}
+.article {
+  height: min-content;
+  flex: 1;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+}
+.imageContainer7 {
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.image7 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  background-color: #d9d9d980;
+}
+.frame427318906 {
+  z-index: 0;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+.title16 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle6 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.article2 {
+  height: min-content;
+  flex: 1;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+}
+.imageContainer8 {
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.image8 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  background-color: #d9d9d980;
+}
+.frame4273189062 {
+  z-index: 0;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+.title17 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle7 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.row4 {
+  height: min-content;
+  align-self: stretch;
+  align-items: center;
+  gap: 40px;
+}
+.article3 {
+  height: min-content;
+  flex: 1;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+}
+.imageContainer9 {
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.image9 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  background-color: #d9d9d980;
+}
+.frame4273189063 {
+  z-index: 0;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+.title18 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle8 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.article4 {
+  height: min-content;
+  flex: 1;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+}
+.imageContainer10 {
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.image10 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  background-color: #d9d9d980;
+}
+.frame4273189064 {
+  z-index: 0;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+.title19 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle9 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.row5 {
+  height: min-content;
+  align-self: stretch;
+}
+.article5 {
+  height: min-content;
+  flex: 1;
+  align-self: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+}
+.imageContainer11 {
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.image11 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  background-color: #d9d9d980;
+}
+.frame4273189065 {
+  z-index: 0;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+.title20 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.subtitle10 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.vector2003 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1728px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  overflow: visible;
+}
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+.list3 {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 170px;
+  overflow: hidden;
+}
+.container4 {
+  position: relative;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+}
+.title21 {
+  color: #000;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: bold;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.list4 {
+  position: relative;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.row6 {
+  height: min-content;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 40px;
+}
+.item {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+}
+.frame {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: #0000000d;
+}
+.icon4 {
+  color: #000;
+  font-size: 62.5px;
+  line-height: 100px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+.labelWrapper {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.frame4273189066 {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 8px;
+}
+.title22 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.subtitle11 {
+  color: #00000080;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.item2 {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+}
+.frame2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: #0000000d;
+}
+.icon5 {
+  color: #000;
+  font-size: 62.5px;
+  line-height: 100px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+.labelWrapper2 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.frame4273189067 {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 8px;
+}
+.title23 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.subtitle12 {
+  color: #00000080;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.row7 {
+  height: min-content;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 40px;
+}
+.item3 {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+}
+.frame3 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: #0000000d;
+}
+.icon6 {
+  color: #000;
+  font-size: 62.5px;
+  line-height: 100px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+.labelWrapper3 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.frame4273189068 {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 8px;
+}
+.title24 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.subtitle13 {
+  color: #00000080;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.item4 {
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+}
+.frame4 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: #0000000d;
+}
+.icon7 {
+  color: #000;
+  font-size: 62.5px;
+  line-height: 100px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+.labelWrapper4 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.frame4273189069 {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 8px;
+}
+.title25 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.subtitle14 {
+  color: #00000080;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.vector2004 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1728px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  overflow: visible;
+}
+.icon8 {
+  width: 100%;
+  height: 100%;
+}
+.section2 {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 170px;
+  background-color: #0009;
+  overflow: hidden;
+}
+.avatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: #d9d9d980;
+  overflow: hidden;
+}
+.container5 {
+  position: relative;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+}
+.title26 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.description3 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.vector2005 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1728px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  overflow: visible;
+}
+.icon9 {
+  width: 100%;
+  height: 100%;
+}
+.form {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 170px;
+  overflow: hidden;
+}
+.container6 {
+  position: relative;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+}
+.title27 {
+  color: #000;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: bold;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.list5 {
+  position: relative;
+  height: min-content;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+.row8 {
+  height: min-content;
+  align-self: stretch;
+}
+.input {
+  width: 520px;
+  height: min-content;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  overflow: hidden;
+}
+.title28 {
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.textfield {
+  height: min-content;
+  align-self: stretch;
+  padding: 8px 12px;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.text {
+  color: #00000080;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  height: 20px;
+  flex: 1;
+  flex-direction: column;
+}
+.labelWrapper5 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.row9 {
+  height: min-content;
+  align-self: stretch;
+}
+.input2 {
+  width: 520px;
+  height: min-content;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  overflow: hidden;
+}
+.title29 {
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.textfield2 {
+  height: min-content;
+  align-self: stretch;
+  padding: 8px 12px;
+  outline: solid 1px #0000001a;
+  outline-offset: -1px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.text2 {
+  color: #00000080;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  height: 20px;
+  flex: 1;
+  flex-direction: column;
+}
+.labelWrapper6 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.button2 {
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  overflow: hidden;
+}
+.primary2 {
+  width: 240px;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #000;
+}
+.title30 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.vector2006 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1728px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  overflow: visible;
+}
+.icon10 {
+  width: 100%;
+  height: 100%;
+}
+.section3 {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  justify-content: center;
+  padding: 60px;
+  overflow: hidden;
+}
+.container7 {
+  width: min-content;
+  height: 100px;
+  justify-content: center;
+  gap: 60px;
+}
+.title31 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 124px;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title32 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 150px;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title33 {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 99px;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
