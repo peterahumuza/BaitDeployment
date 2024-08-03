@@ -127,7 +127,7 @@ export default function Students() {
                         </Thead>
                         <Tbody>
                             {students.map(student => (
-                                <Tr>
+                                <Tr key={student.id}>
                                     <Td><Image
                                         borderRadius='full'
                                         boxSize='50px'

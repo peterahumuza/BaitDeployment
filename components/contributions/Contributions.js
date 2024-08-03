@@ -238,7 +238,7 @@ export default function Contributions({ upgradeScore, contribution = {} }) {
   
     const debouncedSubmit = useCallback(
       debounce((text) => onSubmit(text), 2000),
-      []
+      [onSubmit]
     );
   
     const handleChange = (e) => {
