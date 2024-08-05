@@ -33,11 +33,12 @@ const VoteButton = ({ onClick }) => {
 
 const UserLogo = () => {
   const { currentUser, userData, userRecordsId, setUserData } = useAuth();
-
+    
     return (
-      <Box display="flex" justifyContent="center">
-        <Avatar size={"sm"} src={"https://api.dicebear.com/7.x/initials/svg?seed=" + currentUser?.displayName.split(" ")[0].charAt(0) + currentUser?.displayName.split(" ")[1].charAt(0)}/>
-      </Box>
+      <> </>
+      // <Box display="flex" justifyContent="center">
+      //   <Avatar size={"sm"} src={"https://api.dicebear.com/7.x/initials/svg?seed=" + currentUser?.displayName.split(" ")[0].charAt(0) + currentUser?.displayName.split(" ")[1].charAt(0)}/>
+      // </Box>
     );
   };
   
