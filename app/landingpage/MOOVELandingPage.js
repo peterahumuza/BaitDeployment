@@ -46,9 +46,9 @@ const finalRef = React.useRef(null)
           <div className={classes.title2}>Welcome to MOOVE: Massive Open Online Validation &amp; Evaluation</div>
           <div className={classes.description}>An innovative platform for collaborative learning</div>
           {/* <Button colorScheme='blue'>Blue</Button> */}
-          <div className={classes.button}>
+          <div onClick={onAddStudentOpen}  className={classes.button}>
             <div className={classes.primary}>
-              <div onClick={onAddStudentOpen} className={classes.title3}>Sign In</div>
+              <div className={classes.title3}>Sign In</div>
               
               {/* <div className={classes.title3}>Sign Up Now</div> */}
             </div>

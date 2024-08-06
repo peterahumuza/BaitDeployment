@@ -94,7 +94,6 @@ export default function Students() {
             <VStack w="100%" h="100%" justifyContent="flex-start" alignItems="flex-start" pl="10%" pr="10%" overflowY="auto" pt="10vh" spacing="4" pb="10vh">
                 <Text className="header text-black dark:text-gray-300" fontSize={{ base: "3xl", md: "5xl" }}>
                     Students
-                    
                 </Text>
 
                 <HStack w="100%" justifyContent="space-between" alignItems="center">
