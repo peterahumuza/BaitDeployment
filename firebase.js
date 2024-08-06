@@ -21,7 +21,7 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 };
 
-export const isICRC = process.env.NEXT_PUBLIC_DISPLAY_ICRC === "true";
+export const isICRC = process.env.NEXT_PUBLIC_DISPLAY_ICRC === false;
 
 function ensureAllEnvVariablesAreSet() {
 // ensure all env vars are set

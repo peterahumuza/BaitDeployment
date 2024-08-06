@@ -76,10 +76,6 @@ function Messages({ messages, pretty }) {
     );
 }
 
-
-
-
-
 function ChatSuggestion({ handleNewQuestion, messages, setMessages }) {
     let color = useColorModeValue("gray.600", "gray.300");
     return (

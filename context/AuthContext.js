@@ -40,11 +40,13 @@ export function AuthProvider({ children }) {
   }
 
   function signup(email, password) {
-    return createUserWithEmailAndPassword(auth, anonymizeEmail(email), password);
+    // return createUserWithEmailAndPassword(auth, anonymizeEmail(email), password);
+    return createUserWithEmailAndPassword(auth, email, password);
   }
 
   function login(email, password) {
-    return signInWithEmailAndPassword(auth, anonymizeEmail(email), password);
+    // return signInWithEmailAndPassword(auth, anonymizeEmail(email), password);
+    return signInWithEmailAndPassword(auth, email, password);
   }
 
   function logout() {

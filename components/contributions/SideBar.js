@@ -3,6 +3,7 @@ import { HStack, Text, Tooltip, Box, useColorModeValue, Flex, Button, VStack} fr
 import { useRouter } from "next/navigation";
 import ScoringSystem from "@/components/contributions/ScoringSystem";
 import {isICRC} from "@/firebase";
+import useAuth from "@/context/AuthContext";
 
 
 function HamburgerButton({toggleSidebar, ...props}) {
@@ -30,9 +31,9 @@ function FloatingHamburgerButton({toggleSidebar, ...props}) {
 }
 
 
-
 function SideBarButton({icon, text, onClick, isExpanded, isCurrent, ...props}) {
     const activeColor = useColorModeValue("black", "white");
+
     return (
 
             <button onClick={onClick} className="w-full" {...props}>
@@ -62,6 +63,7 @@ export default function SideBar({ handleModeSwitch, userData, updateScore, point
     const toggleSidebar = () => setIsExpanded(!isExpanded);
     const userScore = userData.score;
     const [animation, displayAnimation] = useState(false);
+    const { logout } = useAuth();
 
     useEffect(() => {
         if (pointsGained > 0) {
@@ -72,6 +74,13 @@ export default function SideBar({ handleModeSwitch, userData, updateScore, point
             }, 2000);
         }
     }, [pointsGained, updateScore]);
+
+    const handleLogout = () => {
+        console.log("Logging out...");
+        logout();
+        router.push("/");
+    }
+    
 
     return (
             <Flex width={{base: isExpanded ? "0" : "fit-content", md: isExpanded ? "18vw" : "fit-content"}} h="100%" position="relative" justifyContent="flex-start" alignItems="flex-start" bg="gray.50" dark="gray.900" spacing={0} zIndex="11" transition="width 0.2s ease-in-out" >
@@ -140,44 +149,21 @@ export default function SideBar({ handleModeSwitch, userData, updateScore, point
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
                             </svg>
                         } />
-                        <SideBarButton text="Inject Bias" onClick={() => handleModeSwitch('upload')} isExpanded={isExpanded} isCurrent={currentMode === 'upload'} icon={
+                        {/* <SideBarButton text="Inject Bias" onClick={() => handleModeSwitch('upload')} isExpanded={isExpanded} isCurrent={currentMode === 'upload'} icon={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
                             </svg>
-                        } />
+                        } /> */}
                     </VStack>
 
                     <VStack w="full" spacing="2" px="4" justifyContent="center" alignItems="flex-start" pb="4" dark="gray.700">
-                        <SideBarButton text="Blindspot Challenge" onClick={() => {clearMessages(); handleModeSwitch('chat');}} isExpanded={isExpanded} isCurrent={currentMode === 'chat'} icon={
+                        {/* <SideBarButton text="Blindspot Challenge" onClick={() => {clearMessages(); handleModeSwitch('chat');}} isExpanded={isExpanded} isCurrent={currentMode === 'chat'} icon={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z" />
                             </svg>
-                        } />
-                        {!isICRC && <button onClick={() => handleModeSwitch('history')} className="w-full" disabled={true}>
-                            {isExpanded ? (
-                                    <Tooltip label="Coming soon!" fontSize="sm" rounded="full" shadow="md" placement="right" offset={[0, 20]}>
-                                        <HStack className="flex w-full rounded-full p-3 text-left text-sm font-400 text-gray-800 transition-colors duration-200 hover:bg-gray-200 focus:outline-none dark:text-gray-200 dark:hover:bg-gray-800" w="full" justifyContent="flex-start" alignItems="center" spacing="4" color={currentMode === 'history' ? activeColor : "gray.500"}>
-                                            <Box w="25px" h="25px" justifyContent="flex-start" alignItems="center" display="flex">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-6 h-6">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z" />
-                                                </svg>
-                                            </Box>
-                                            <Text fontSize="md" fontWeight="light" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis">
-                                                Chat history
-                                            </Text>
-                                        </HStack>
-                                    </Tooltip>
-                            ) : (
-                                    <Tooltip label="Chat history (coming soon)" fontSize="sm" rounded="full" shadow="md" placement="right" offset={[0, 20]} onClick={() => handleModeSwitch('history')}>
-                                        <Box w="100%" h="fit-content" justifyContent="flex-start" alignItems="center" display="flex" p="3" rounded="full" className="transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-800" color={currentMode === 'history' ? activeColor : "gray.500"}>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-6 h-6">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z" />
-                                            </svg>
-                                        </Box>
-                                    </Tooltip>
-                            )}
-                        </button> }
-                        <SideBarButton text="Logout" onClick={() => router.push('/')} isExpanded={isExpanded} isCurrent={false} icon={
+                        } /> */}
+                        
+                        <SideBarButton text="Logout" onClick={handleLogout} isExpanded={isExpanded} isCurrent={false} icon={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
                             </svg>
