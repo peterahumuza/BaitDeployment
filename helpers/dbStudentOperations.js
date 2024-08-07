@@ -13,16 +13,16 @@ import {
 } from "firebase/firestore";
 
 export default async function createStudent(student) {
-    console.log('Add student ', student)
+    // console.log('Add student ', student)
     return await addDoc(collection(db, "users"), {
         ...student,
-        createdAt: serverTimestamp(),
+        CreatedAt: serverTimestamp(),
     });
 }
 
 export async function getStudents() {
     const students = [];
-    const q = query(collection(db, "users"), where("isStudent", "==", true));
+    const q = query(collection(db, "users"), where("IsStudent", "==", true));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
         students.push({ ...doc.data(), id: doc.id });
