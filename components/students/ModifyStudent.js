@@ -111,7 +111,7 @@ export default function ModifyStudent({ isOpen, onOpen, onClose, initialRef, fin
           LastName,
           Email,
           Phone,
-          isStudent: true,
+          IsStudent: true,
         };
 
         if (isNewUser) {
@@ -139,6 +139,7 @@ export default function ModifyStudent({ isOpen, onOpen, onClose, initialRef, fin
         if (error.code === 'auth/email-already-in-use') {
           setMessages(["Email already in use"]);
         } else {
+          console.log('Error creating student: ', error);
           setMessages(["Failed to register"]);
         }
 

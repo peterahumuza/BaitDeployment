@@ -138,7 +138,7 @@ export default function Students() {
                                     <Td>{student.FirstName} {student.LastName}</Td>
                                     <Td >25.4%</Td>
                                     <Td>2</Td>
-                                    <Td>{formatTimestamp(student.createdAt)}</Td>
+                                    <Td>{formatTimestamp(student.CreatedAt)}</Td>
                                     <Td>
                                         <ButtonGroup >
                                             <Tooltip label='View student'>
@@ -178,6 +178,7 @@ export default function Students() {
                 initialRef={initialRef}
                 finalRef={finalRef}
                 title="Add Student"
+                isNewUser={true}
             />
 
             <ModifyStudent

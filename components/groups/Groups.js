@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import { Text, Image, Button, ButtonGroup, Tooltip, IconButton } from "@chakra-ui/react";
 import { Input, InputGroup, InputRightElement, InputLeftElement } from "@chakra-ui/react";
 import { Stack, HStack, VStack } from '@chakra-ui/react'
@@ -20,8 +20,14 @@ import {
 import ModifyGroup from '@/components/groups/ModifyGroup';
 import GroupProfile from '@/components/groups/GroupProfile';
 import WarningModal from '@/components/systemmessages/WarningModal';
+import { getGroups } from '@/helpers/dbGroupOperations';
 
 export default function Groups() {
+    const [groups, setGroups] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [selectedGroup, setSelectedGroup] = useState(null);
+
     const {
         isOpen: isAddGroupOpen,
         onOpen: onAddGroupOpen,
@@ -48,6 +54,55 @@ export default function Groups() {
 
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
+
+    useEffect(() => {
+        const fetchGroups = async () => {
+            console.log('Fetching groups');
+            try {
+                const groups = await getGroups();
+                console.log(groups);
+                setGroups(groups);
+            } catch (err) {
+                setError(err);
+            } finally {
+                // setLoading(false);
+            }
+        };
+
+        fetchGroups();
+    }, []);
+
+    const handleEditClick = (group) => {
+        setSelectedGroup(group);
+        onEditGroupOpen();
+    };
+
+    const handleAddGroupClose = (newGroup) => {
+        if (newGroup) {
+            setGroups(prevGroups => [...prevGroups, newGroup]);
+        }
+        onAddGroupClose();
+    };
+
+    const handleEditGroupClose = (updatedGroup) => {
+        console.log('Updated Group: ', updatedGroup);
+        if (updatedGroup) {
+
+            setGroups(prevGroups => 
+                prevGroups.map(group => 
+                    group.id === updatedGroup.id ? updatedGroup : group
+                )
+            );
+        }
+        onEditGroupClose();
+    };
+
+    const formatTimestamp = (timestamp) => {
+        if (timestamp && timestamp.seconds) {
+            return new Date(timestamp.seconds * 1000).toLocaleDateString();
+        }
+        return '';
+    };
 
     return (
         <>
@@ -84,47 +139,28 @@ export default function Groups() {
                             </Tr>
                         </Thead>
                         <Tbody>
-                            <Tr>
-                                <Td>Group 1</Td>
-                                <Td >Group 1 description</Td>
-                                <Td >1</Td>
-                                <Td>July, 31 2024</Td>
-                                <Td>
-                                    <ButtonGroup >
-                                        <Tooltip label='View group'>
-                                            <IconButton size='sm' aria-label='view' onClick={onGroupProfileOpen} colorScheme='cyan' icon={<ViewIcon />}></IconButton>
-                                        </Tooltip>
-                                        <Tooltip label='Edit group'>
-                                            <IconButton size='sm' aria-label='edit' onClick={onEditGroupOpen} colorScheme='blue' icon={<EditIcon />}></IconButton>
-                                        </Tooltip>
-                                        <Tooltip label='Delete group'>
-                                            <IconButton size='sm' aria-label='delete' onClick={onDeleteWarningOpen} colorScheme='red' icon={<DeleteIcon />}></IconButton>
-                                        </Tooltip>
-                                    </ButtonGroup>
-                                </Td>
+                            {groups.map((group) => (
+                                <Tr key={group.id}>
+                                    <Td>{group.GroupName}</Td>
+                                    <Td >{group.Description}</Td>
+                                    <Td >0</Td>
+                                    <Td>{formatTimestamp(group.CreatedAt)}</Td>
+                                    <Td>
+                                        <ButtonGroup >
+                                            <Tooltip label='View group'>
+                                                <IconButton size='sm' aria-label='view' onClick={onGroupProfileOpen} colorScheme='cyan' icon={<ViewIcon />}></IconButton>
+                                            </Tooltip>
+                                            <Tooltip label='Edit group'>
+                                                <IconButton size='sm' aria-label='edit' onClick={() => handleEditClick(group)} colorScheme='blue' icon={<EditIcon />}></IconButton>
+                                            </Tooltip>
+                                            <Tooltip label='Delete group'>
+                                                <IconButton size='sm' aria-label='delete' onClick={onDeleteWarningOpen} colorScheme='red' icon={<DeleteIcon />}></IconButton>
+                                            </Tooltip>
+                                        </ButtonGroup>
+                                    </Td>
 
-                            </Tr>
-                            <Tr>
-                                <Td>Group 2</Td>
-                                <Td >Group 2 description</Td>
-                                <Td >2</Td>
-                                <Td>July, 31 2024</Td>
-                                <Td>
-                                    <ButtonGroup >
-                                        <Tooltip label='View group'>
-                                            <IconButton size='sm' aria-label='view' onClick={onGroupProfileOpen} colorScheme='cyan' icon={<ViewIcon />}></IconButton>
-                                        </Tooltip>
-                                        <Tooltip label='Edit group'>
-                                            <IconButton size='sm' aria-label='edit' onClick={onEditGroupOpen} colorScheme='blue' icon={<EditIcon />}></IconButton>
-                                        </Tooltip>
-                                        <Tooltip label='Delete group'>
-                                            <IconButton size='sm' aria-label='delete' onClick={onDeleteWarningOpen} colorScheme='red' icon={<DeleteIcon />}></IconButton>
-                                        </Tooltip>
-                                    </ButtonGroup>
-                                </Td>
-
-                            </Tr>
-
+                                </Tr>
+                            ))}
                         </Tbody>
                         <Tfoot>
                             <Tr>
@@ -141,18 +177,21 @@ export default function Groups() {
 
             <ModifyGroup
                 isOpen={isAddGroupOpen}
-                onClose={onAddGroupClose}
+                onClose={handleAddGroupClose}
                 initialRef={initialRef}
                 finalRef={finalRef}
                 title="Add Group"
+                isNewGroup={true}
             />
 
             <ModifyGroup
                 isOpen={isEditGroupOpen}
-                onClose={onEditGroupClose}
+                onClose={handleEditGroupClose}
                 initialRef={initialRef}
                 finalRef={finalRef}
                 title="Edit Group"
+                isNewGroup={false}
+                existingGroup={selectedGroup}
             />
 
             <GroupProfile
