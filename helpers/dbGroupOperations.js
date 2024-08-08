@@ -1,4 +1,5 @@
 import { db, storage } from "../firebase";
+import generateUID from "./utils";
 import {
     serverTimestamp,
     addDoc,
@@ -17,6 +18,7 @@ export async function createGroup(Group) {
     return await addDoc(collection(db, "groups"), {
         ...Group,
         CreatedAt: serverTimestamp(),
+        id: generateUID(),
     });
 }
 
