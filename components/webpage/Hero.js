@@ -47,7 +47,7 @@ export default function Hero() {
 
           <div className='absolute bottom-9 transform -translate-y-1/2 right-0 bg-blue-100 bg-opacity-70 text-blue-900 text-xs md:text-sm rounded-tl-lg px-3 py-2'>
             <p>Welcome Message</p>
-            <p className='font-semibold'>Dr. Mary-Anne "Annie" Hartley</p>
+            <p className='font-semibold'>Dr. Mary-Anne &quot;Annie&quot; Hartley</p>
           </div>
         </div>
       </div>

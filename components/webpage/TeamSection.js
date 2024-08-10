@@ -28,7 +28,7 @@ export default function TeamSection() {
           </div>
           <div className='text-center'>
             <p className='text-xl font-semibold text-gray-800'>
-              Dr. Mary-Anne "Annie" Hartley, MD, PhD, MPH
+              Dr. Mary-Anne &quot;Annie&quot; Hartley, MD, PhD, MPH
             </p>
             <div className='flex items-center justify-center space-x-2 mt-2'>
               <p className='text-gray-600'>Principal Lead</p>

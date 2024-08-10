@@ -18,7 +18,7 @@ export default function LearnSection() {
 
       <div className='w-full md:w-1/2 p-4'>
         <div className='bg-white p-6 rounded-lg h-full'>
-          <h2 className='text-2xl font-semibold mb-4'>What You'll Learn</h2>
+          <h2 className='text-2xl font-semibold mb-4'>What You&apos;ll Learn</h2>
           <p className='text-gray-700 mb-4'>
             In this course you will gain the expertise to:
           </p>
