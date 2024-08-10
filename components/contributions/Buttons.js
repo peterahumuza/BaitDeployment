@@ -166,24 +166,9 @@ const CopyButton = ({ text }) => {
 
 const WeighingScaleIcon = () => {
     return (
-        <svg width="20" height="20" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="chainPattern" patternUnits="userSpaceOnUse" width="10" height="10">
-                    <circle cx="5" cy="5" r="2" fill="none" stroke="black" stroke-width="1" />
-                </pattern>
-            </defs>
-            <path d="M130 280 Q150 270 170 280 L180 260 Q150 250 120 260 Z" fill="black" />
-            <path d="M150 260 Q140 200 150 140 Q160 80 150 40" stroke="black" stroke-width="10" fill="none" />
-            <line x1="50" y1="40" x2="250" y2="40" stroke="black" stroke-width="8" />
-            <circle cx="80" cy="220" r="40" fill="black" />
-            <circle cx="220" cy="220" r="40" fill="black" />
-            <line x1="60" y1="45" x2="80" y2="180" stroke="url(#chainPattern)" stroke-width="8" />
-            <line x1="80" y1="45" x2="80" y2="180" stroke="url(#chainPattern)" stroke-width="8" />
-            <line x1="100" y1="45" x2="80" y2="180" stroke="url(#chainPattern)" stroke-width="8" />
-            <line x1="200" y1="45" x2="220" y2="180" stroke="url(#chainPattern)" stroke-width="8" />
-            <line x1="220" y1="45" x2="220" y2="180" stroke="url(#chainPattern)" stroke-width="8" />
-            <line x1="240" y1="45" x2="220" y2="180" stroke="url(#chainPattern)" stroke-width="8" />
-        </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scale"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/>
+    <path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+  </svg>
     )
 }
 
