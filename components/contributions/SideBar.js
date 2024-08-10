@@ -78,7 +78,7 @@ export default function SideBar({ handleModeSwitch, userData, updateScore, point
     const handleLogout = () => {
         console.log("Logging out...");
         logout();
-        router.push("/");
+        router.push("/moove4bait");
     }
     
 

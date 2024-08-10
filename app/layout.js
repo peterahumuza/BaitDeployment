@@ -1,9 +1,12 @@
 "use client"
+import { Inter } from 'next/font/google';
 import "./globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import { ErrorProvider } from "../context/ErrorContext";
-import { AuthProvider } from "../context/AuthContext";
+import { ErrorProvider } from "@/context/ErrorContext";
+import { AuthProvider } from "@/context/AuthContext";
 import { extendTheme } from '@chakra-ui/react';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   const config = {
@@ -15,7 +18,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning={true} >
-      <body className="font-HelveticaNeue text-black bg-gray-50 dark:bg-black relative dark:text-white dark:text-opacity-90 transition duration-1000">
+      <body className={`bg-white grid min-h-[100dvh] grid-rows-[auto_1fr_auto] ${inter.className} font-HelveticaNeue text-black bg-gray-50 dark:bg-black relative dark:text-white dark:text-opacity-90 transition duration-1000`} >
         <ChakraProvider theme={theme}>
           <ErrorProvider className="z-[9999]">
             <AuthProvider>

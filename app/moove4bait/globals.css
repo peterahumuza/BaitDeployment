@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../public/assets/fonts/helvetica-neue/HelveticaNeue-Roman.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-Medium";
+  src: url("../../public/assets/fonts/helvetica-neue/HelveticaNeue-Medium.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-Bold";
+  src: url("../../public/assets/fonts/helvetica-neue/HelveticaNeueBold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-Light";
+  src: url("../../public/assets/fonts/helvetica-neue/HelveticaNeue-Light.otf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-Thin";
+  src: url("../../public/assets/fonts/helvetica-neue/HelveticaNeue-Thin.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@keyframes blinkingCursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scoreUpdate {
+  0% {
+    bottom: 0px;
+    opacity: 1;
+  }
+  40% {
+    bottom: 50px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.body {
+  color: var(--text-primary);
+}
+
+.title {
+  font-family: "HelveticaNeue";
+  font-size: 5.0rem;
+  line-height: 1.0;
+  letter-spacing: -0.20rem;
+}
+
+.intro {
+  font-family: "HelveticaNeue-Light";
+  font-size: 4.0rem;
+  line-height: 1;
+  letter-spacing: -0.1rem;
+}
+
+.header {
+  font-family: "HelveticaNeue";
+  font-size: 3.0rem;
+  line-height: 1;
+  letter-spacing: -0.1rem;
+}
+
+.subheader {
+  font-family: "HelveticaNeue";
+  font-size: 2.0rem;
+  line-height: 1.2;
+}
+
+.body {
+  font-family: "HelveticaNeue-Light";
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.leaderboard .subheader {
+  font-family: "HelveticaNeue-Bold";
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.leaderboard .body {
+  font-family: "HelveticaNeue";
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.label {
+  font-family: "HelveticaNeue-Light";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.header-button {
+  font-family: "HelveticaNeue-Light";
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.button-text{
+  font-family: "HelveticaNeue";
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-family: "HelveticaNeue";
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.box-text {
+  font-family: "HelveticaNeue";
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.button-text-small{
+  font-family: "HelveticaNeue";
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.table {
+  font-family: "HelveticaNeue";
+  font-size: 1.0rem;
+  line-height: 1.6;
+}
+
+.tablebold {
+  font-family: "HelveticaNeue";
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
+/* Fade-in animations  */
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.05); 
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.05); 
+  border-radius: 10px; 
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.05) transparent;
+}
+
+.chatspace {
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 180px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #f5f5f5;
+    border-radius: 180px;
+  }  
+
+}
+
+
+/* Screen adaptation */
+
+@media (max-width: 767px) and (min-width: 480px) {
+  .title {
+    font-size: 2.8rem;
+    letter-spacing: -0.15rem;
+  }
+
+  .intro {
+    font-size: 2.5rem;
+  }
+
+  .label {
+    font-size: 1.0rem;
+  }
+
+  .header {
+    font-size: 2.4rem;
+  }
+
+  .subheader {
+    font-size: 1.8rem;
+  }
+
+  .box-text {
+    font-size: 1.2rem;
+  }
+
+  .body {
+    font-size: 1.3rem;
+  }
+
+  .button-text{
+    font-size: 1.4rem;
+  }
+
+  .button-text-small{
+    font-size: 1.4rem;
+  }
+
+  .table {
+    font-size: 1.1rem;
+  }
+
+  .tablebold {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .title {
+    font-size: 2.0rem;
+    letter-spacing: -0.1rem;
+  }
+
+  .intro {
+    font-size: 2.0rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+
+  .header {
+    font-size: 2.0rem;
+  }
+
+  .subheader {
+    font-size: 1.3rem;
+  }
+
+  .body {
+    font-size: 1.1rem;
+  }
+
+  .button-text{
+    font-size: 1.2rem;
+  }
+
+  .button-text-small{
+    font-size: 0.8rem;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .tablebold {
+    font-size: 0.9rem;
+  }
+}
