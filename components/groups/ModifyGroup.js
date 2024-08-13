@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import useError from "@/context/ErrorContext";
 import { createGroup, updateGroup } from '@/helpers/dbGroupOperations';
+import generateUID from "@/helpers/utils";
 
 export default function ModifyGroup({ isOpen, onOpen, onClose, initialRef, finalRef, title, isNewGroup = false, existingGroup = null }) {
     const [GroupName, setGroupName] = useState('');
@@ -61,10 +62,12 @@ export default function ModifyGroup({ isOpen, onOpen, onClose, initialRef, final
 
                 if(isNewGroup){
                     // Logic to create a new group
+                    groupData.id = generateUID();
                     await createGroup(groupData);
                 }else{
                     // Logic to update an existing group
                     groupData.id = existingGroup.id;
+                    groupData.CreatedAt = existingGroup.CreatedAt;
                     await updateGroup(existingGroup.id, groupData);
                 }
                 

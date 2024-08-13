@@ -1,5 +1,4 @@
 import { db, storage } from "../firebase";
-import generateUID from "./utils";
 import {
     serverTimestamp,
     addDoc,
@@ -18,8 +17,12 @@ export async function createGroup(Group) {
     return await addDoc(collection(db, "groups"), {
         ...Group,
         CreatedAt: serverTimestamp(),
-        id: generateUID(),
     });
+}
+
+export async function deleteGroup(groupId) {
+    const groupRef = doc(db, "groups", groupId);
+    await deleteDoc(groupRef);
 }
 
 export async function updateGroup(groupId, updatedGroup) {
@@ -29,7 +32,8 @@ export async function updateGroup(groupId, updatedGroup) {
 
 export async function getGroups() {
     const Groups = [];
-    const q = query(collection(db, "groups"));
+    const q = query(collection(db, "groups"), orderBy('CreatedAt', 'desc'));
+
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
         Groups.push({ ...doc.data(), id: doc.id });

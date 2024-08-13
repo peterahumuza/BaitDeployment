@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, Image, Button, ButtonGroup, Tooltip, IconButton } from "@chakra-ui/react";
 import { Input, InputGroup, InputRightElement, InputLeftElement } from "@chakra-ui/react";
 import { Stack, HStack, VStack } from '@chakra-ui/react'
@@ -21,12 +21,13 @@ import ModifyGroup from '@/components/groups/ModifyGroup';
 import GroupProfile from '@/components/groups/GroupProfile';
 import WarningModal from '@/components/systemmessages/WarningModal';
 import { getGroups } from '@/helpers/dbGroupOperations';
+import { formatTimestamp } from '@/helpers/utils';
 
 export default function Groups() {
     const [groups, setGroups] = useState([]);
     // const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [selectedGroup, setSelectedGroup] = useState(null);
+    const [selectedGroup, setSelectedGroup] = useState({});
 
     const {
         isOpen: isAddGroupOpen,
@@ -60,7 +61,6 @@ export default function Groups() {
             console.log('Fetching groups');
             try {
                 const groups = await getGroups();
-                console.log(groups);
                 setGroups(groups);
             } catch (err) {
                 setError(err);
@@ -72,37 +72,37 @@ export default function Groups() {
         fetchGroups();
     }, []);
 
+    const handleAddGroupClose = async (newGroup) => {
+        if (newGroup) {
+            const groups = await getGroups();
+            setGroups(groups);
+        }
+        onAddGroupClose();
+    };
+
     const handleEditClick = (group) => {
         setSelectedGroup(group);
         onEditGroupOpen();
     };
 
-    const handleAddGroupClose = (newGroup) => {
-        if (newGroup) {
-            setGroups(prevGroups => [...prevGroups, newGroup]);
-        }
-        onAddGroupClose();
-    };
-
-    const handleEditGroupClose = (updatedGroup) => {
-        console.log('Updated Group: ', updatedGroup);
+    const handleEditGroupClose = async (updatedGroup) => {
         if (updatedGroup) {
-
-            setGroups(prevGroups => 
-                prevGroups.map(group => 
-                    group.id === updatedGroup.id ? updatedGroup : group
-                )
-            );
+            const groups = await getGroups();
+            setGroups(groups);
         }
         onEditGroupClose();
     };
 
-    const formatTimestamp = (timestamp) => {
-        if (timestamp && timestamp.seconds) {
-            return new Date(timestamp.seconds * 1000).toLocaleDateString();
-        }
-        return '';
+    const handleDeleteClick = (group) => {
+        setSelectedGroup(group);
+        onDeleteWarningOpen();
     };
+
+    const handleDeleteGroup = async (group) => {
+        const groups = await getGroups();
+        setGroups(groups);
+        onDeleteWarningClose();
+    }
 
     return (
         <>
@@ -154,7 +154,7 @@ export default function Groups() {
                                                 <IconButton size='sm' aria-label='edit' onClick={() => handleEditClick(group)} colorScheme='blue' icon={<EditIcon />}></IconButton>
                                             </Tooltip>
                                             <Tooltip label='Delete group'>
-                                                <IconButton size='sm' aria-label='delete' onClick={onDeleteWarningOpen} colorScheme='red' icon={<DeleteIcon />}></IconButton>
+                                                <IconButton size='sm' aria-label='delete' onClick={() => handleDeleteClick(group)} colorScheme='red' icon={<DeleteIcon />}></IconButton>
                                             </Tooltip>
                                         </ButtonGroup>
                                     </Td>
@@ -202,10 +202,12 @@ export default function Groups() {
 
             <WarningModal
                 isOpen={isDeleteWarningOpen}
-                onClose={onDeleteWarningClose}
+                onClose={handleDeleteGroup}
                 action="Delete"
-                message="Are you sure you want to delete this Group?"
+                message={`Are you sure you want to delete the "${selectedGroup.GroupName}" Group?`}
                 buttonColor="red"
+                collection="groups"
+                selectedItem={selectedGroup}
             />
         </>
     )

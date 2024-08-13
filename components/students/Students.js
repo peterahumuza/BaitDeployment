@@ -21,6 +21,7 @@ import ModifyStudent from './ModifyStudent';
 import StudentProfile from './StudentProfile';
 import WarningModal from '@/components/systemmessages/WarningModal';
 import { getStudents } from '@/helpers/dbStudentOperations';
+import { formatTimestamp } from '@/helpers/utils';
 
 export default function Students() {
     const [students, setStudents] = useState([]);
@@ -74,13 +75,6 @@ export default function Students() {
 
         fetchStudents();
     }, []); 
-
-    const formatTimestamp = (timestamp) => {
-        if (timestamp && timestamp.seconds) {
-            return new Date(timestamp.seconds * 1000).toLocaleDateString();
-        }
-        return '';
-    };
 
     const handleAddStudentClose = (newStudent) => {
         if (newStudent) {
@@ -147,9 +141,9 @@ export default function Students() {
                                             <Tooltip label='Edit student'>
                                                 <IconButton size='sm' aria-label='edit' onClick={onEditStudentOpen} colorScheme='blue' icon={<EditIcon />}></IconButton>
                                             </Tooltip>
-                                            <Tooltip label='Lock student account'>
+                                            {/* <Tooltip label='Lock student account'>
                                                 <IconButton size='sm' aria-label='lock student account' onClick={onLockWarningOpen} colorScheme='orange' icon={<LockIcon />}></IconButton>
-                                            </Tooltip>
+                                            </Tooltip> */}
                                             <Tooltip label='Delete student'>
                                                 <IconButton size='sm' aria-label='deactivate' onClick={onDeleteWarningOpen} colorScheme='red' icon={<DeleteIcon />}></IconButton>
                                             </Tooltip>

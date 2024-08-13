@@ -9,7 +9,6 @@ import {
   InputRightElement,
   InputGroup,
   Button,
-  Box,
   Image,
   Modal,
   ModalOverlay,
@@ -18,48 +17,50 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  VStack,
+  Text,
+  useColorModeValue,
+  InputLeftElement,
 } from '@chakra-ui/react';
+import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
+import SignUpModal from '@/app/login/moove4bait-signup';
+import MOOVELandingPage from "@/app/landingpage/MOOVELandingPage";
 
-export default function LoginModal({ isOpen, onOpen, onClose, initialRef, finalRef, title }) {
+export default function LoginModal({ isOpen, onSignUpOpen, onClose, initialRef, finalRef, title }) {
   const { login } = useAuth();
-  const [Email, setEmail] = useState('');
-  const [Password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const { error, setError, setMessages } = useError();
+  const { setError, setMessages } = useError();
   const [show, setShow] = useState(false);
   const router = useRouter();
 
+  const bgColor = useColorModeValue('white', 'gray.800');
+  const textColor = useColorModeValue('gray.800', 'white');
+
   async function handleSubmit(e) {
     e.preventDefault();
-
-    // Implement your upload logic here
-    console.log(Email, Password);
     try {
       setError(false);
       setLoading(true);
-      await login(Email, Password);
+      await login(email, password);
+      setLoading(false);
+      router.push("/chat");
     } catch (err) {
       console.log(err);
       setMessages(["Failed to login to your account"]);
-      return setError(true);
+      setError(true);
+      setLoading(false);
     }
-    setError(false)
-
-    setLoading(false);
-    router.push("/chat");
   };
-
 
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
   const handleShowClick = () => setShow(!show);
-
-  const handleClose = () => {
-    console.log('Closing the modal');
-    setEmail('');
-    setPassword('');
-    setShow(!show);
-    onClose();
+  
+  const handleSwitchToSignUp = () => {
+    onClose();  
+    onSignUpOpen();
   };
 
   return (
@@ -67,40 +68,70 @@ export default function LoginModal({ isOpen, onOpen, onClose, initialRef, finalR
       initialFocusRef={initialRef}
       finalFocusRef={finalRef}
       isOpen={isOpen}
+      onSignUpOpen={onSignUpOpen}
       onClose={onClose}
+      // onOpen={onSignUpOpen}
+      size="md"
     >
-      <ModalOverlay />
-      <ModalContent >
-        <ModalHeader>{title}</ModalHeader>
+      <ModalOverlay backdropFilter="blur(5px)" />
+      <ModalContent bg={bgColor} borderRadius="xl" boxShadow="xl">
+        <ModalHeader textAlign="center" fontSize="2xl" fontWeight="bold" color={textColor}>
+          {title}
+        </ModalHeader>
         <ModalCloseButton />
         <ModalBody pb={6}>
-          <FormControl>
-            <FormLabel>Enter Email</FormLabel>
-            <Input ref={initialRef} value={Email} onChange={handleEmailChange} placeholder='Enter Email' />
-          </FormControl>
-          <FormControl>
-            <FormLabel>Enter Password</FormLabel>
-            <InputGroup size='md'>
-              <Input
-                value={Password}
-                onChange={handlePasswordChange}
-                pr='4.5rem'
-                type={show ? 'text' : 'password'}
-                placeholder='Enter password'
-              />
-              <InputRightElement width='4.5rem'>
-                <Button h='1.75rem' size='sm' onClick={handleShowClick}>
-                  {show ? 'Hide' : 'Show'}
-                </Button>
-              </InputRightElement>
-            </InputGroup>
-          </FormControl>
+          <VStack spacing={4}>
+            <Image src="/assets/logos/bait.png" alt="MOOVE4BAIT Logo" className="w-auto h-auto max-w-[150px] max-h-[150px] mx-auto"
+  style={{ objectFit: 'contain' }} />
+            <FormControl>
+              <FormLabel color={textColor}>Email</FormLabel>
+              <InputGroup>
+                <InputLeftElement pointerEvents="none" children={<FaEnvelope color="gray.300" />} />
+                <Input
+                  ref={initialRef}
+                  value={email}
+                  onChange={handleEmailChange}
+                  placeholder='Enter your email'
+                  type="email"
+                />
+              </InputGroup>
+            </FormControl>
+            <FormControl>
+              <FormLabel color={textColor}>Password</FormLabel>
+              <InputGroup>
+                <InputLeftElement pointerEvents="none" children={<FaLock color="gray.300" />} />
+                <Input
+                  value={password}
+                  onChange={handlePasswordChange}
+                  type={show ? 'text' : 'password'}
+                  placeholder='Enter your password'
+                />
+                <InputRightElement width="3rem">
+                  <Button h="1.5rem" size="sm" onClick={handleShowClick} variant="ghost">
+                    {show ? <FaEyeSlash /> : <FaEye />}
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
+            </FormControl>
+          </VStack>
         </ModalBody>
-        <ModalFooter>
-          <Button onClick={handleSubmit}>
+        <ModalFooter flexDirection="column" alignItems="stretch">
+          <Button
+            colorScheme="blue"
+            onClick={handleSubmit}
+            isLoading={loading}
+            loadingText="Logging in..."
+            width="100%"
+            mb={3}
+          >
             Login
           </Button>
-          {/* <Button onClick={handleClose}>Cancel</Button> */}
+          <Text fontSize="sm" textAlign="center" color={textColor}>
+            Don't have an account?{' '}
+            <Button variant="link" colorScheme="blue" onClick={handleSwitchToSignUp}>
+              Sign up
+            </Button>
+          </Text>
         </ModalFooter>
       </ModalContent>
     </Modal>

@@ -4,9 +4,9 @@ import Image from 'next/image';
 export default function PartnersSection() {
   const partners = [
     { name: 'Partner 1', logoSrc: '/assets/logos/moove.svg' },
-    { name: 'Partner 2', logoSrc: '/path/to/logo2.png' },
-    { name: 'Partner 3', logoSrc: '/path/to/logo3.png' },
-    { name: 'Partner 4', logoSrc: '/path/to/logo4.png' },
+    { name: 'Partner 2', logoSrc: '/assets/logos/moove.svg' },
+    { name: 'Partner 3', logoSrc: '/assets/logos/moove.svg' },
+    { name: 'Partner 4', logoSrc: '/assets/logos/moove.svg' },
   ];
 
   return (

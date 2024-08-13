@@ -1,8 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Header } from '@/components/webpage/Header';
-import { Footer } from '@/components/webpage/Footer';
 
 export default function Course() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -40,8 +38,6 @@ export default function Course() {
   ];
 
   return (
-    <>
-    <Header />
     <div className='container mx-auto px-4 py-8'>
       {/* Section 1 */}
       <section className='mb-16'>
@@ -57,7 +53,7 @@ export default function Course() {
             </div>
 
             {/* Covers - Callout Text */}
-            <p className='text-2xl font-semibold mb-4'>
+            <p className='text-2xl  mb-4 font-light'>
               Covers pretty much everything you need to know about Biases in
               Medical AI
             </p>
@@ -191,7 +187,5 @@ export default function Course() {
         </div>
       </section>
     </div>
-    <Footer />
-    </>
   );
 }

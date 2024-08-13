@@ -10,13 +10,23 @@ import {
     ModalBody,
     ModalCloseButton,
 } from '@chakra-ui/react';
+import { deleteGroup } from '@/helpers/dbGroupOperations';
+import { deleteSystemPrompt } from '@/helpers/dbSystemPromptOperations';
 
 
-const WarningModal = ({ isOpen, onClose, action, message, buttonColor }) => {
+const WarningModal = ({ isOpen, onClose, action, message, buttonColor, collection, selectedItem }) => {
 
-    const handleSave = () => {
-        // Logic to save the updated user information
-        onClose();
+    const handleDelete = () => {
+ 
+        if (collection === 'groups') {
+            deleteGroup(selectedItem.id);
+        }
+
+        if (collection === 'systemprompts') {
+            deleteSystemPrompt(selectedItem.id);
+        }
+
+        onClose(selectedItem);
     };
 
     return (
@@ -30,7 +40,7 @@ const WarningModal = ({ isOpen, onClose, action, message, buttonColor }) => {
                 </ModalBody>
 
                 <ModalFooter>
-                    <Button colorScheme={buttonColor} mr={3} onClick={handleSave}>
+                    <Button colorScheme={buttonColor} mr={3} onClick={handleDelete}>
                         {action}
                     </Button>
                     <Button onClick={onClose}>Cancel</Button>

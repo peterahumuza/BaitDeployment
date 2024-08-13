@@ -31,15 +31,10 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className='hover:text-gray-600 transition' href={'/moove4bait'} target="_blank" rel="noopener noreferrer">
+            <Link className='hover:text-gray-600 transition' href={'/moove4bait'}>
               Moove4Bait
             </Link>
           </li>
-          {/* <li>
-            <Link className='hover:text-gray-600 transition' href={'/lab'}>
-              Lab
-            </Link>
-          </li> */}
           <li>
             <Link className='hover:text-gray-600 transition' href='#contact'>
               Contact
